@@ -2,14 +2,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Directory Index</title>
+<title>rOpenSci 📚 list</title>
 
 <style>
 body {
 	font-family: monospace; font-size: 14px;
 }
 ul {
-	list-style-type: none;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: '\1F4D6';
+  padding-right: 5px;
 }
 </style>
 
@@ -18,7 +30,7 @@ ul {
 </head>
 
 <body>
-<h3>Directory Index</h3>
+<h3>rOpenSci 📚 list</h3>
 <ul id="repolist"></ul>
 </body>
 </html>
