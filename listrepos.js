@@ -11,7 +11,7 @@ function getRepos(page) {
 	}).then(({ data, headers, status }) => {
 		data.map(function(repo){
 			var name = repo.full_name.split("/")[1];
-			//if(name === 'ropensci-books.github.io') return;
+			if(name === 'ropensci-books.github.io') return;
 
 			// try to ignore empty repos
 			var created_at = Date.parse(repo.created_at);
