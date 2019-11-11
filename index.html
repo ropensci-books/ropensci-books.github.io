@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>rOpenSci 📚 list</title>
+<title>rOpenSci Books 📚</title>
 
 <style>
 body {
@@ -10,18 +10,23 @@ body {
 }
 ul {
   list-style: none;
-  margin-left: 0;
-  padding-left: 0;
 }
 
 li {
-  padding-left: 1em;
-  text-indent: -1em;
+  vertical-align: bottom;
+  font-size: 1.4em;
+}
+
+a:hover {
+  color: red;
 }
 
 li:before {
+  content: '\1F4D8';
+}
+
+li:hover:before {
   content: '\1F4D6';
-  padding-right: 5px;
 }
 </style>
 
@@ -30,7 +35,7 @@ li:before {
 </head>
 
 <body>
-<h3>rOpenSci 📚 list</h3>
+<h1>rOpenSci Books 📚</h1>
 <ul id="repolist"></ul>
 </body>
 </html>
