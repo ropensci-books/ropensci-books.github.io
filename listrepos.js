@@ -11,9 +11,11 @@ function getRepos(page) {
 	}).then(({ data, headers, status }) => {
 		data.map(function(repo){
 			var name = repo.full_name.split("/")[1];
+			var description = repo.description;
 			if(name === 'ropensci-books.github.io') return;
 			if(name === 'exemplighratia') return;
 			if(name === 'exemplighratia2') return;
+			if(name === '.github') return;
 
 			// try to ignore empty repos
 			var created_at = Date.parse(repo.created_at);
@@ -23,7 +25,7 @@ function getRepos(page) {
 				return;
 			}
 			var li = document.createElement('li');
-			li.innerHTML = '<a href="./' + name + '">' + name + '</a>';
+			li.innerHTML = '<a href="./' + name + '">' + name + ' (' + description + ')' + '</a>';
 			ul.appendChild(li);
 		});
 		if(data.length == pagemax){
