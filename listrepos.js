@@ -25,7 +25,7 @@ function getRepos(page) {
 				return;
 			}
 			var li = document.createElement('li');
-			li.innerHTML = '<a href="./' + name + '">' + name + ' (' + description + ')' + '</a>';
+			li.innerHTML = '<a href="./' + name + '">' + name + '</a>' + ' (' + description + ')';
 			ul.appendChild(li);
 		});
 		if(data.length == pagemax){
